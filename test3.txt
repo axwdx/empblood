@@ -1,1 +1,11 @@
-33333333333
+cmake -G "Visual Studio 10 Win64" -DWITH_BOOST=OFF -DWITH_ORACLE=OFF -WITH_MYSQL=ON MYSQL_DIR=D:\mysql-5.7.13-winx64 MYSQL_LIBRARIES=D:\mysql-5.7.13-winx64\lib\libmysql.lib  .
+
+
+=======================================================================================================
+md build && cd build	// 创建编译后存放路径
+cmake ../ -DWITH_MYSQL=ON -DSOCI_MYSQL=ON		// 默认编译成64位
+cmake ../ -G "Visual Studio 14 Win32" -DWITH_MYSQL=ON -DSOCI_MYSQL=ON
+
+
+
+cmake ../ -G "Visual Studio 16 2019" -A Win32 -DWITH_MYSQL=ON -DSOCI_MYSQL=ON
